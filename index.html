@@ -1,1 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Flashcards interativos sobre Cegueira Noturna (Nictalopia) — conceitos, causas, prevenção e tratamentos.">
+  <title>Flashcards · Cegueira Noturna (Nictalopia)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>Cegueira Noturna</h1>
+      <p class="subtitle">Nictalopia — Flashcards interativos</p>
+      <p class="hint" aria-live="polite">Clique ou pressione Enter/Espaço em um cartão para revelar a resposta</p>
+    </div>
+  </header>
 
+  <main class="container">
+    <section class="flashcards-grid" aria-label="Flashcards sobre Nictalopia">
+
+      <!-- Card 1 -->
+      <article class="card" tabindex="0" role="button" aria-expanded="false" aria-label="Flashcard 1: O que é Cegueira Noturna">
+        <div class="card-inner">
+          <div class="card-face card-front">
+            <span class="card-number">01</span>
+            <h2>O que é Cegueira Noturna (Nictalopia)?</h2>
+            <span class="flip-hint">Clique para virar</span>
+          </div>
+          <div class="card-face card-back">
+            <span class="card-number">01</span>
+            <p>É a dificuldade ou incapacidade de enxergar em locais com pouca iluminação. Não é uma doença isolada, mas um sintoma de condições subjacentes que afetam a retina.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="card" tabindex="0" role="button" aria-expanded="false" aria-label="Flashcard 2: Quais células dos olhos são afetadas">
+        <div class="card-inner">
+          <div class="card-face card-front">
+            <span class="card-number">02</span>
+            <h2>Quais células dos olhos são afetadas?</h2>
+            <span class="flip-hint">Clique para virar</span>
+          </div>
+          <div class="card-face card-back">
+            <span class="card-number">02</span>
+            <p>Afeta os <strong>bastonetes</strong>, fotorreceptores da retina responsáveis pela visão periférica e em ambientes escuros. A deficiência de rodopsina (pigmento visual) impede essa adaptação.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="card" tabindex="0" role="button" aria-expanded="false" aria-label="Flashcard 3: O que pode causar a Nictalopia">
+        <div class="card-inner">
+          <div class="card-face card-front">
+            <span class="card-number">03</span>
+            <h2>O que pode causar a Nictalopia?</h2>
+            <span class="flip-hint">Clique para virar</span>
+          </div>
+          <div class="card-face card-back">
+            <span class="card-number">03</span>
+            <p>Deficiência severa de Vitamina A, Retinose Pigmentar, Catarata, Miopia elevada, Glaucoma e complicações do Diabetes (Retinopatia Diabética).</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="card" tabindex="0" role="button" aria-expanded="false" aria-label="Flashcard 4: Qual a relação com a Vitamina A">
+        <div class="card-inner">
+          <div class="card-face card-front">
+            <span class="card-number">04</span>
+            <h2>Qual a relação com a Vitamina A?</h2>
+            <span class="flip-hint">Clique para virar</span>
+          </div>
+          <div class="card-face card-back">
+            <span class="card-number">04</span>
+            <p>A deficiência de Vitamina A é a principal causa evitável de cegueira infantil no mundo, afetando milhões de crianças, especialmente em países em desenvolvimento (dados OMS).</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 5 -->
+      <article class="card" tabindex="0" role="button" aria-expanded="false" aria-label="Flashcard 5: Existe tratamento ou cura">
+        <div class="card-inner">
+          <div class="card-face card-front">
+            <span class="card-number">05</span>
+            <h2>Existe tratamento ou cura?</h2>
+            <span class="flip-hint">Clique para virar</span>
+          </div>
+          <div class="card-face card-back">
+            <span class="card-number">05</span>
+            <p>Depende da causa! Casos por deficiência nutricional tratam-se com suplementação. Para causas genéticas (como a Retinose Pigmentar), a Terapia Gênica (ex: Luxturna) já é uma realidade promissora.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 6 -->
+      <article class="card" tabindex="0" role="button" aria-expanded="false" aria-label="Flashcard 6: Como prevenir ou diagnosticar">
+        <div class="card-inner">
+          <div class="card-face card-front">
+            <span class="card-number">06</span>
+            <h2>Como prevenir ou diagnosticar?</h2>
+            <span class="flip-hint">Clique para virar</span>
+          </div>
+          <div class="card-face card-back">
+            <span class="card-number">06</span>
+            <p>Diagnostica-se via exames de fundo de olho e eletrorretinografia. A prevenção inclui alimentação rica em Vitamina A (cenoura, espinafre, ovos) e consultas oftalmológicas regulares.</p>
+          </div>
+        </div>
+      </article>
+
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Conteúdo educativo · Não substitui consulta médica</p>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.card').forEach(card => {
+      const toggle = () => {
+        card.classList.toggle('flipped');
+        const isFlipped = card.classList.contains('flipped');
+        card.setAttribute('aria-expanded', isFlipped);
+      };
+
+      card.addEventListener('click', toggle);
+
+      card.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          toggle();
+        }
+      });
+    });
+  </script>
+</body>
+</html>
