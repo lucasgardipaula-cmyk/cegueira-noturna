@@ -8,14 +8,13 @@
 }
 
 :root {
-  /* Dark nocturnal palette — high contrast */
   --bg-deep: #0b0f1a;
   --bg-card: #141b2d;
   --bg-card-hover: #1a2338;
   --border: #2a354d;
   --text-primary: #e8eef8;
   --text-secondary: #a8b4cc;
-  --accent: #5eead4;        /* soft cyan — night vision glow */
+  --accent: #5eead4;
   --accent-dim: #2dd4bf33;
   --number: #7dd3fc;
   --shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
@@ -38,7 +37,6 @@ body {
   flex-direction: column;
 }
 
-/* Subtle radial glow for night atmosphere */
 body::before {
   content: "";
   position: fixed;
@@ -67,7 +65,6 @@ body::before {
   font-size: clamp(1.75rem, 4vw, 2.4rem);
   font-weight: 700;
   letter-spacing: -0.02em;
-  color: var(--text-primary);
 }
 
 .subtitle {
@@ -139,7 +136,6 @@ body::before {
   border-color: #3d4f6f;
 }
 
-/* Front */
 .card-front {
   align-items: flex-start;
 }
@@ -148,7 +144,6 @@ body::before {
   font-size: 1.15rem;
   font-weight: 600;
   line-height: 1.4;
-  color: var(--text-primary);
   margin-top: 0.5rem;
 }
 
@@ -157,10 +152,8 @@ body::before {
   font-size: 0.75rem;
   color: var(--text-secondary);
   opacity: 0.7;
-  letter-spacing: 0.02em;
 }
 
-/* Back */
 .card-back {
   transform: rotateY(180deg);
   background: linear-gradient(145deg, #152035 0%, #1a2740 100%);
@@ -169,7 +162,6 @@ body::before {
 
 .card-back p {
   font-size: 0.95rem;
-  color: var(--text-primary);
   line-height: 1.6;
 }
 
@@ -178,7 +170,6 @@ body::before {
   font-weight: 600;
 }
 
-/* Number badge */
 .card-number {
   font-size: 0.75rem;
   font-weight: 700;
@@ -203,22 +194,19 @@ body::before {
   color: var(--text-secondary);
 }
 
-/* ===== Responsive tweaks ===== */
+/* ===== Responsive ===== */
 @media (max-width: 600px) {
   .card {
     height: 240px;
   }
-
   .card-front h2 {
     font-size: 1.05rem;
   }
-
   .card-back p {
     font-size: 0.9rem;
   }
 }
 
-/* Reduced motion preference */
 @media (prefers-reduced-motion: reduce) {
   .card-inner {
     transition: none;
