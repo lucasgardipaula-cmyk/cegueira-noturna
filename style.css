@@ -230,6 +230,6 @@ body {
 /* Reduz animação para quem prefere menos movimento */
 @media (prefers-reduced-motion: reduce) {
   .card-inner {
-    transition: none;
+    transition: none; 
   }
 }
