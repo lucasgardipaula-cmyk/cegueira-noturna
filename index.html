@@ -3,127 +3,123 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cegueira Noturna — Nictalopia | Flashcards</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Flashcards • Cegueira Noturna (Nictalopia)</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container">
-    <header>
+  <header class="header">
+    <div class="header-content">
       <h1>Cegueira Noturna</h1>
-      <p class="subtitle">Nictalopia — Flashcards interativos</p>
-      <p class="instruction">Clique ou pressione <kbd>Enter</kbd> / <kbd>Espaço</kbd> em um cartão para revelar a resposta</p>
-    </header>
-
-    <div class="flashcards">
-      <!-- Card 01 -->
-      <div class="card" tabindex="0" data-number="01">
-        <div class="card-inner">
-          <div class="card-front">
-            <span class="number">01</span>
-            <h2>O que é Cegueira Noturna (Nictalopia)?</h2>
-            <p class="hint">Clique para virar</p>
-          </div>
-          <div class="card-back">
-            <span class="number">01</span>
-            <p>É a dificuldade ou incapacidade de enxergar em locais com pouca iluminação. Não é uma doença isolada, mas um sintoma de condições subjacentes que afetam a retina.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 02 -->
-      <div class="card" tabindex="0" data-number="02">
-        <div class="card-inner">
-          <div class="card-front">
-            <span class="number">02</span>
-            <h2>Quais células dos olhos são afetadas?</h2>
-            <p class="hint">Clique para virar</p>
-          </div>
-          <div class="card-back">
-            <span class="number">02</span>
-            <p>Afeta os bastonetes, fotorreceptores da retina responsáveis pela visão periférica e em ambientes escuros. A deficiência de rodopsina (pigmento visual) impede essa adaptação.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 03 -->
-      <div class="card" tabindex="0" data-number="03">
-        <div class="card-inner">
-          <div class="card-front">
-            <span class="number">03</span>
-            <h2>O que pode causar a Nictalopia?</h2>
-            <p class="hint">Clique para virar</p>
-          </div>
-          <div class="card-back">
-            <span class="number">03</span>
-            <p>Deficiência severa de Vitamina A, Retinose Pigmentar, Catarata, Miopia elevada, Glaucoma e complicações do Diabetes (Retinopatia Diabética).</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 04 -->
-      <div class="card" tabindex="0" data-number="04">
-        <div class="card-inner">
-          <div class="card-front">
-            <span class="number">04</span>
-            <h2>Qual a relação com a Vitamina A?</h2>
-            <p class="hint">Clique para virar</p>
-          </div>
-          <div class="card-back">
-            <span class="number">04</span>
-            <p>A deficiência de Vitamina A é a principal causa evitável de cegueira infantil no mundo, afetando milhões de crianças, especialmente em países em desenvolvimento (dados OMS).</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 05 -->
-      <div class="card" tabindex="0" data-number="05">
-        <div class="card-inner">
-          <div class="card-front">
-            <span class="number">05</span>
-            <h2>Existe tratamento ou cura?</h2>
-            <p class="hint">Clique para virar</p>
-          </div>
-          <div class="card-back">
-            <span class="number">05</span>
-            <p>Depende da causa! Casos por deficiência nutricional tratam-se com suplementação. Para causas genéticas (como a Retinose Pigmentar), a Terapia Gênica (ex: Luxturna) já é uma realidade promissora.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 06 -->
-      <div class="card" tabindex="0" data-number="06">
-        <div class="card-inner">
-          <div class="card-front">
-            <span class="number">06</span>
-            <h2>Como prevenir ou diagnosticar?</h2>
-            <p class="hint">Clique para virar</p>
-          </div>
-          <div class="card-back">
-            <span class="number">06</span>
-            <p>Diagnostica-se via exames de fundo de olho e eletrorretinografia. A prevenção inclui alimentação rica em Vitamina A (cenoura, espinafre, ovos) e consultas oftalmológicas regulares.</p>
-          </div>
-        </div>
-      </div>
+      <p class="subtitle">Nictalopia — Explore os conceitos em 6 flashcards interativos</p>
     </div>
+  </header>
 
-    <footer>
-      <p>Conteúdo educativo · Não substitui consulta médica</p>
-    </footer>
-  </div>
+  <main class="container">
+    <div class="cards-grid" id="cardsGrid">
 
-  <script>
-    document.querySelectorAll('.card').forEach(card => {
-      card.addEventListener('click', () => {
-        card.classList.toggle('flipped');
-      });
+      <!-- Card 1 -->
+      <article class="card" data-index="0" tabindex="0" role="button" aria-label="Flashcard 1: O que é Cegueira Noturna">
+        <div class="card-inner">
+          <div class="card-face card-front">
+            <span class="card-category">Conceito</span>
+            <div class="card-icon">👁️</div>
+            <h2 class="card-title">O que é Cegueira Noturna (Nictalopia)?</h2>
+            <p class="card-hint">Clique para virar</p>
+          </div>
+          <div class="card-face card-back">
+            <h3 class="back-title">Conceito Teórico</h3>
+            <p class="back-text">Não é a incapacidade total de ver no escuro, mas sim a dificuldade de adaptação da visão em ambientes com baixa luminosidade ou à noite. Está relacionada ao mau funcionamento dos bastonetes (células fotorreceptoras da retina).</p>
+          </div>
+        </div>
+      </article>
 
-      card.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          card.classList.toggle('flipped');
-        }
-      });
-    });
-  </script>
+      <!-- Card 2 -->
+      <article class="card" data-index="1" tabindex="0" role="button" aria-label="Flashcard 2: Deficiência vitamínica">
+        <div class="card-inner">
+          <div class="card-face card-front">
+            <span class="card-category">Bioquímica</span>
+            <div class="card-icon">🧪</div>
+            <h2 class="card-title">Qual a principal deficiência vitamínica associada?</h2>
+            <p class="card-hint">Clique para virar</p>
+          </div>
+          <div class="card-face card-back">
+            <h3 class="back-title">Causa Nutricional</h3>
+            <p class="back-text">A deficiência de Vitamina A. Essa vitamina é essencial para a produção de rodopsina, o pigmento da retina responsável por captar a luz em ambientes escuros.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="card" data-index="2" tabindex="0" role="button" aria-label="Flashcard 3: Cenoura e visão">
+        <div class="card-inner">
+          <div class="card-face card-front">
+            <span class="card-category">Mito ou Verdade?</span>
+            <div class="card-icon">🥕</div>
+            <h2 class="card-title">Cenoura realmente faz bem para a visão noturna?</h2>
+            <p class="card-hint">Clique para virar</p>
+          </div>
+          <div class="card-face card-back">
+            <h3 class="back-title">Verdade (com ressalvas)</h3>
+            <p class="back-text">A cenoura é rica em betacaroteno (pré-vitamina A). Ela ajuda a manter a saúde visual de quem tem deficiência, mas comer em excesso não dará “supervisão” para quem já tem níveis normais.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="card" data-index="3" tabindex="0" role="button" aria-label="Flashcard 4: Origem do mito da Segunda Guerra">
+        <div class="card-inner">
+          <div class="card-face card-front">
+            <span class="card-category">História</span>
+            <div class="card-icon">✈️</div>
+            <h2 class="card-title">De onde veio a história de que cenouras dão “visão de raio-X”?</h2>
+            <p class="card-hint">Clique para virar</p>
+          </div>
+          <div class="card-face card-back">
+            <h3 class="back-title">Propaganda da 2ª Guerra</h3>
+            <p class="back-text">Curiosidade histórica! Na 2ª Guerra Mundial, a propaganda britânica espalhou que seus pilotos comiam muita cenoura para enxergar no escuro. Na verdade, era um disfarce para esconder a invenção do novo sistema de Radar.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 5 -->
+      <article class="card" data-index="4" tabindex="0" role="button" aria-label="Flashcard 5: Outras causas">
+        <div class="card-inner">
+          <div class="card-face card-front">
+            <span class="card-category">Causas</span>
+            <div class="card-icon">🧬</div>
+            <h2 class="card-title">Cegueira noturna é apenas falta de vitamina?</h2>
+            <p class="card-hint">Clique para virar</p>
+          </div>
+          <div class="card-face card-back">
+            <h3 class="back-title">Não só vitamina</h3>
+            <p class="back-text">Mito! Ela também pode ser causada por doenças genéticas e degenerativas, como a Retinose Pigmentar, além de cataratas, glaucoma e miopia severa. Nesses casos, o tratamento varia de acordo com a patologia.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 6 -->
+      <article class="card" data-index="5" tabindex="0" role="button" aria-label="Flashcard 6: Saúde pública">
+        <div class="card-inner">
+          <div class="card-face card-front">
+            <span class="card-category">Saúde Pública</span>
+            <div class="card-icon">🌍</div>
+            <h2 class="card-title">A cegueira noturna ainda é um problema global?</h2>
+            <p class="card-hint">Clique para virar</p>
+          </div>
+          <div class="card-face card-back">
+            <h3 class="back-title">Dados da OMS</h3>
+            <p class="back-text">Fato! Segundo a OMS, a deficiência de Vitamina A é a principal causa de cegueira evitável em crianças no mundo (afetando principalmente países em desenvolvimento) e aumenta o risco de cegueira noturna em gestantes.</p>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>Clique ou pressione Enter/Espaço em um card para virar • Dark Mode educativo</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
